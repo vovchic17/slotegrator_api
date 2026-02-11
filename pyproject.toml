@@ -1,0 +1,40 @@
+[project]
+name = "slotegrator-api"
+version = "0.1.0"
+description = "Slotegrator API client"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.13.3",
+    "certifi>=2026.1.4",
+    "pydantic>=2.12.5",
+]
+
+[tool.ruff]
+line-length = 79
+indent-width = 4
+target-version = "py313"
+
+[tool.ruff.lint]
+ignore = [
+    "D102",
+    "D103",
+    "D100",
+    "D104",
+    "D105",
+    "D106",
+    "D107",
+    "D203",
+    "D212",
+]
+select = ["ALL"]
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-line-length = "dynamic"
+
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+ignore_missing_imports = true
