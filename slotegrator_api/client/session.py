@@ -3,7 +3,7 @@ import hashlib
 import hmac
 import secrets
 import ssl
-from http import HTTPStatus
+from http import HTTPMethod, HTTPStatus
 from time import time
 from urllib.parse import urlencode
 
@@ -27,10 +27,7 @@ class HTTPSession:
         base_api_url: str,
         timeout: float,
     ) -> None:
-        self.headers = {
-            "X-Merchant-Id": merchant_id,
-            "X-Nonce": secrets.token_hex(16),
-        }
+        self.merchant_id = merchant_id
         self.merchant_key = merchant_key
         self.base_api_url = base_api_url.strip("/")
         self.timeout = timeout
@@ -43,12 +40,21 @@ class HTTPSession:
     ) -> T:
         session = await self.create()
         params = method.model_dump(exclude_none=True)
-        headers = self.calculate_xsign(self.merchant_key, self.headers, params)
+        headers = self.calculate_xsign(
+            self.merchant_id,
+            self.merchant_key,
+            params,
+        )
+        data = {
+            "data"
+            if method.__http_method__ == HTTPMethod.POST
+            else "params": params,
+        }
         async with session.request(
             method.__http_method__,
             method.get_url(self.base_api_url),
-            params=params,
             headers=headers,
+            **data,
         ) as resp:
             raw_resp = await resp.text()
             if resp.status != HTTPStatus.OK:
@@ -77,13 +83,15 @@ class HTTPSession:
 
     @staticmethod
     def calculate_xsign(
+        merchant_id: str,
         merchant_key: str,
-        headers: dict[str, str],
         request_params: dict[str, object] | None = None,
     ) -> dict[str, str]:
         """Calculate X-Sign."""
-        headers |= {
+        headers = {
+            "X-Merchant-Id": merchant_id,
             "X-Timestamp": str(int(time())),
+            "X-Nonce": secrets.token_hex(16),
         }
         merged_params = headers | (request_params or {})
         sorted_params = dict(sorted(merged_params.items()))

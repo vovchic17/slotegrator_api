@@ -12,7 +12,7 @@ class SlotegratorMethod[
 ](BaseModel, ABC):
     """Base Slotegrator method."""
 
-    __return_type__: ClassVar[SlotegratorType]
+    __return_type__: ClassVar[type[SlotegratorType]]
     __method_path__: ClassVar[str]
     __http_method__: ClassVar[HTTPMethod]
 

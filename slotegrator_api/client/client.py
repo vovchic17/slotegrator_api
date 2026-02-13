@@ -1,7 +1,13 @@
 from typing import Literal
 
-from slotegrator_api.methods import GetGames, GetGameTags, GetLobbyTables
-from slotegrator_api.types import Game, GameTag, Table
+from slotegrator_api.methods import (
+    GetGames,
+    GetGameTags,
+    GetLobbyTables,
+    InitDemoGame,
+    InitGame,
+)
+from slotegrator_api.types import Game, GameTag, PreparedGame, Table
 
 from .session import HTTPSession
 
@@ -40,7 +46,7 @@ class SlotegratorAPI:
     async def get_game_tags(
         self,
         expand: list[Literal["category"]] | None = None,
-    ) -> GameTag:
+    ) -> list[GameTag]:
         res = await self._session(GetGameTags(expand=expand))
         return res.items
 
@@ -59,8 +65,50 @@ class SlotegratorAPI:
         )
         return res.lobby
 
-    async def init_game(self): ...
-    async def init_demo_game(self): ...
+    async def init_game(
+        self,
+        game_uuid: str,
+        player_id: str,
+        player_name: str,
+        currency: str,
+        session_id: str,
+        device: Literal["desktop", "mobile"] | None = "desktop",
+        return_url: str | None = None,
+        language: str | None = None,
+        email: str | None = None,
+        lobby_data: str | None = None,
+    ) -> PreparedGame:
+        return await self._session(
+            InitGame(
+                game_uuid=game_uuid,
+                player_id=player_id,
+                player_name=player_name,
+                currency=currency,
+                session_id=session_id,
+                device=device,
+                return_url=return_url,
+                language=language,
+                email=email,
+                lobby_data=lobby_data,
+            ),
+        )
+
+    async def init_demo_game(
+        self,
+        game_uuid: str,
+        device: Literal["desktop", "mobile"] | None = "desktop",
+        return_url: str | None = None,
+        language: str | None = None,
+    ) -> PreparedGame:
+        return await self._session(
+            InitDemoGame(
+                game_uuid=game_uuid,
+                device=device,
+                return_url=return_url,
+                language=language,
+            ),
+        )
+
     async def get_limits(self): ...
     async def get_freespin_limits(self): ...
     async def get_jackpots(self): ...

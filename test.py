@@ -2,6 +2,7 @@ import asyncio
 
 from slotegrator_api import SlotegratorAPI
 
+
 async def main() -> None:
     client = SlotegratorAPI(
         merchant_id="b06bced7abc649cc077f2a6aef29d67c",
@@ -9,20 +10,20 @@ async def main() -> None:
         base_api_url="https://staging.slotegrator.com/api/index.php/v1",
     )
 
-    # games = await client.get_games(
-    #     expand=["tags", "parameters", "images", "related_games"],
-    # )
-    # for game in games:
-    #     print(game.uuid)
-
-    # game_tags = await client.get_game_tags(expand=["category"])
-    # print(game_tags)
-
-    lobby = await client.get_lobby_tables(
-        "cb2d3bc6e2ce0532610c97b412723ac9a57337ac",
-        "EUR",
+    games = await client.get_games(
+        expand=["tags", "parameters", "images", "related_games"],
     )
-    print(lobby)
+    for game in games:
+        print(game.uuid)
+
+    prep_game = await client.init_game(
+        "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "1",
+        "test",
+        "RUB",
+        "123",
+    )
+    print(prep_game)
     await client.close()
 
 
