@@ -23,7 +23,7 @@ jobs:
         run: uv sync
 
       - name: ruff check
-        run: uvx ruff check
+        run: uv run ruff check
 
       - name: mypy check
-        run: uvx mypy .
+        run: uv run mypy .
