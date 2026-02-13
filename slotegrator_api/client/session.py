@@ -5,6 +5,7 @@ import secrets
 import ssl
 from http import HTTPMethod, HTTPStatus
 from time import time
+from typing import TYPE_CHECKING
 from urllib.parse import urlencode
 
 import certifi
@@ -15,6 +16,9 @@ from slotegrator_api import __version__
 from slotegrator_api.exceptions import SlotegratorAPIError
 from slotegrator_api.methods import SlotegratorMethod
 from slotegrator_api.types import SlotegratorObject
+
+if TYPE_CHECKING:
+    from aiohttp.client import _RequestOptions
 
 
 class HTTPSession:
@@ -45,16 +49,16 @@ class HTTPSession:
             self.merchant_key,
             params,
         )
-        data = {
-            "data"
-            if method.__http_method__ == HTTPMethod.POST
-            else "params": params,
-        }
+        kwargs: _RequestOptions = {"headers": headers}
+        if method.__http_method__ is HTTPMethod.POST:
+            kwargs["data"] = params
+        else:
+            kwargs["params"] = params
+
         async with session.request(
             method.__http_method__,
             method.get_url(self.base_api_url),
-            headers=headers,
-            **data,
+            **kwargs,
         ) as resp:
             raw_resp = await resp.text()
             if resp.status != HTTPStatus.OK:

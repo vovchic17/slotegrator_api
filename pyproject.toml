@@ -37,6 +37,7 @@ docstring-code-line-length = "dynamic"
 
 [tool.ruff.lint.per-file-ignores]
 "*/client.py" = ["PLR0913"]
+"test.py" = ["T201"]
 
 [tool.mypy]
 plugins = ["pydantic.mypy"]
