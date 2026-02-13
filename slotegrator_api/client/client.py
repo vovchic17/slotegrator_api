@@ -3,11 +3,12 @@ from typing import Literal
 from slotegrator_api.methods import (
     GetGames,
     GetGameTags,
+    GetLimits,
     GetLobbyTables,
     InitDemoGame,
     InitGame,
 )
-from slotegrator_api.types import Game, GameTag, PreparedGame, Table
+from slotegrator_api.types import Game, GameTag, Limit, PreparedGame, Table
 
 from .session import HTTPSession
 
@@ -109,14 +110,16 @@ class SlotegratorAPI:
             ),
         )
 
-    async def get_limits(self): ...
-    async def get_freespin_limits(self): ...
-    async def get_jackpots(self): ...
-    async def get_freespin_bets(self): ...
-    async def set_freespin_campaign(self): ...
-    async def get_freespin_campaign(self): ...
-    async def cancel_set_camping(self): ...
-    async def set_freevoucher_campaign(self): ...
-    async def get_freevoucher_campaign(self): ...
-    async def cancel_freevoucher_campaign(self): ...
-    async def self_validate(self): ...
+    async def get_limits(self) -> list[Limit]:
+        return await self._session(GetLimits())
+
+    async def get_freespin_limits(self): ...  # noqa: ANN201
+    async def get_jackpots(self): ...  # noqa: ANN201
+    async def get_freespin_bets(self): ...  # noqa: ANN201
+    async def set_freespin_campaign(self): ...  # noqa: ANN201
+    async def get_freespin_campaign(self): ...  # noqa: ANN201
+    async def cancel_set_camping(self): ...  # noqa: ANN201
+    async def set_freevoucher_campaign(self): ...  # noqa: ANN201
+    async def get_freevoucher_campaign(self): ...  # noqa: ANN201
+    async def cancel_freevoucher_campaign(self): ...  # noqa: ANN201
+    async def self_validate(self): ...  # noqa: ANN201

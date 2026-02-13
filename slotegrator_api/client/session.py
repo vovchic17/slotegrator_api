@@ -11,11 +11,12 @@ from urllib.parse import urlencode
 import certifi
 from aiohttp import ClientSession, ClientTimeout, TCPConnector
 from aiohttp.hdrs import USER_AGENT
+from pydantic import TypeAdapter
 
 from slotegrator_api import __version__
 from slotegrator_api.exceptions import SlotegratorAPIError
 from slotegrator_api.methods import SlotegratorMethod
-from slotegrator_api.types import SlotegratorObject
+from slotegrator_api.types import SlotegratorType
 
 if TYPE_CHECKING:
     from aiohttp.client import _RequestOptions
@@ -38,7 +39,7 @@ class HTTPSession:
         self._session: ClientSession | None = None
         self.ssl_context = ssl.create_default_context(cafile=certifi.where())
 
-    async def __call__[T: SlotegratorObject](
+    async def __call__[T: SlotegratorType](
         self,
         method: SlotegratorMethod[T],
     ) -> T:
@@ -69,7 +70,8 @@ class HTTPSession:
                     json_resp["message"],
                     json_resp["status"],
                 )
-            return method.__return_type__.model_validate_json(raw_resp)
+            adapter = TypeAdapter(method.__return_type__)
+            return adapter.validate_json(raw_resp)
 
     async def create(self) -> ClientSession:
         """Create http session."""

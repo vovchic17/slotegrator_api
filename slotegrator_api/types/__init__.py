@@ -1,8 +1,9 @@
-from .base import SlotegratorObject
+from .base import SlotegratorObject, SlotegratorType
 from .commalist import CommaList
 from .game import Game, GameImage, GameParameters
 from .game_tag import GameTag
 from .items import Items
+from .limit import Limit
 from .lobby import Lobby, Table
 from .prepared_game import PreparedGame
 
@@ -13,8 +14,10 @@ __all__ = (
     "GameParameters",
     "GameTag",
     "Items",
+    "Limit",
     "Lobby",
     "PreparedGame",
     "SlotegratorObject",
+    "SlotegratorType",
     "Table",
 )

@@ -4,15 +4,13 @@ from typing import ClassVar
 
 from pydantic import BaseModel
 
-from slotegrator_api.types import SlotegratorObject
+from slotegrator_api.types import SlotegratorType
 
 
-class SlotegratorMethod[
-    SlotegratorType: SlotegratorObject,
-](BaseModel, ABC):
+class SlotegratorMethod[T: SlotegratorType](BaseModel, ABC):
     """Base Slotegrator method."""
 
-    __return_type__: ClassVar[type[SlotegratorType]]
+    __return_type__: ClassVar[type[T]]
     __method_path__: ClassVar[str]
     __http_method__: ClassVar[HTTPMethod]
 
