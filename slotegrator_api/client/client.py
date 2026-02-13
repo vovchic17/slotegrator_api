@@ -2,6 +2,7 @@ from typing import Literal
 
 from slotegrator_api.methods import (
     BalanceNotify,
+    GetFreespinBets,
     GetFreespinLimits,
     GetGames,
     GetGameTags,
@@ -13,6 +14,7 @@ from slotegrator_api.methods import (
 )
 from slotegrator_api.types import (
     BalanceNotification,
+    FreespinBets,
     FreespinLimit,
     Game,
     GameTag,
@@ -143,7 +145,18 @@ class SlotegratorAPI:
             ),
         )
 
-    async def get_freespin_bets(self): ...  # noqa: ANN201
+    async def get_freespin_bets(
+        self,
+        game_uuid: str,
+        currency: str,
+    ) -> FreespinBets:
+        return await self._session(
+            GetFreespinBets(
+                game_uuid=game_uuid,
+                currency=currency,
+            ),
+        )
+
     async def set_freespin_campaign(self): ...  # noqa: ANN201
     async def get_freespin_campaign(self): ...  # noqa: ANN201
     async def cancel_set_camping(self): ...  # noqa: ANN201

@@ -1,6 +1,7 @@
 from .balance_notification import BalanceNotification
 from .base import SlotegratorObject, SlotegratorType
 from .commalist import CommaList
+from .freespin_bets import Bet, FreespinBets, TotalBet
 from .freespin_limit import FreespinLimit
 from .game import Game, GameImage, GameParameters
 from .game_tag import GameTag
@@ -12,7 +13,9 @@ from .prepared_game import PreparedGame
 
 __all__ = (
     "BalanceNotification",
+    "Bet",
     "CommaList",
+    "FreespinBets",
     "FreespinLimit",
     "Game",
     "GameImage",
@@ -26,4 +29,5 @@ __all__ = (
     "SlotegratorObject",
     "SlotegratorType",
     "Table",
+    "TotalBet",
 )

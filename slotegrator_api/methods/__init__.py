@@ -1,5 +1,6 @@
 from .balance_notify import BalanceNotify
 from .base import SlotegratorMethod
+from .get_freespin_bets import GetFreespinBets
 from .get_freespin_limits import GetFreespinLimits
 from .get_game_tags import GetGameTags
 from .get_games import GetGames
@@ -11,6 +12,7 @@ from .init_game import InitGame
 
 __all__ = (
     "BalanceNotify",
+    "GetFreespinBets",
     "GetFreespinLimits",
     "GetGameTags",
     "GetGames",

@@ -10,6 +10,12 @@ async def main() -> None:
         base_api_url="https://staging.slotegrator.com/api/index.php/v1",
     )
 
+    tags = await client.get_freespin_bets(
+        "bdad4dcaca47b264f54b39789446a7e0551ed5b0",
+        "RUB",
+    )
+    print(tags)
+
     await client.close()
 
 
