@@ -1,6 +1,7 @@
 from typing import Literal
 
 from slotegrator_api.methods import (
+    GetFreespinLimits,
     GetGames,
     GetGameTags,
     GetLimits,
@@ -8,7 +9,14 @@ from slotegrator_api.methods import (
     InitDemoGame,
     InitGame,
 )
-from slotegrator_api.types import Game, GameTag, Limit, PreparedGame, Table
+from slotegrator_api.types import (
+    FreespinLimit,
+    Game,
+    GameTag,
+    Limit,
+    PreparedGame,
+    Table,
+)
 
 from .session import HTTPSession
 
@@ -113,7 +121,9 @@ class SlotegratorAPI:
     async def get_limits(self) -> list[Limit]:
         return await self._session(GetLimits())
 
-    async def get_freespin_limits(self): ...  # noqa: ANN201
+    async def get_freespin_limits(self) -> list[FreespinLimit]:
+        return await self._session(GetFreespinLimits())
+
     async def get_jackpots(self): ...  # noqa: ANN201
     async def get_freespin_bets(self): ...  # noqa: ANN201
     async def set_freespin_campaign(self): ...  # noqa: ANN201

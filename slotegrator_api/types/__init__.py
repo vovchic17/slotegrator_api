@@ -1,5 +1,6 @@
 from .base import SlotegratorObject, SlotegratorType
 from .commalist import CommaList
+from .freespin_limit import FreespinLimit
 from .game import Game, GameImage, GameParameters
 from .game_tag import GameTag
 from .items import Items
@@ -9,6 +10,7 @@ from .prepared_game import PreparedGame
 
 __all__ = (
     "CommaList",
+    "FreespinLimit",
     "Game",
     "GameImage",
     "GameParameters",
