@@ -1,18 +1,22 @@
 from typing import Literal
 
 from slotegrator_api.methods import (
+    BalanceNotify,
     GetFreespinLimits,
     GetGames,
     GetGameTags,
+    GetJackpots,
     GetLimits,
     GetLobbyTables,
     InitDemoGame,
     InitGame,
 )
 from slotegrator_api.types import (
+    BalanceNotification,
     FreespinLimit,
     Game,
     GameTag,
+    Jackpot,
     Limit,
     PreparedGame,
     Table,
@@ -124,7 +128,21 @@ class SlotegratorAPI:
     async def get_freespin_limits(self) -> list[FreespinLimit]:
         return await self._session(GetFreespinLimits())
 
-    async def get_jackpots(self): ...  # noqa: ANN201
+    async def get_jackpots(self) -> list[Jackpot]:
+        return await self._session(GetJackpots())
+
+    async def balance_notify(
+        self,
+        balance: float,
+        session_id: str,
+    ) -> BalanceNotification:
+        return await self._session(
+            BalanceNotify(
+                balance=balance,
+                session_id=session_id,
+            ),
+        )
+
     async def get_freespin_bets(self): ...  # noqa: ANN201
     async def set_freespin_campaign(self): ...  # noqa: ANN201
     async def get_freespin_campaign(self): ...  # noqa: ANN201

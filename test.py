@@ -10,8 +10,6 @@ async def main() -> None:
         base_api_url="https://staging.slotegrator.com/api/index.php/v1",
     )
 
-    print(await client.get_freespin_limits())
-
     await client.close()
 
 
