@@ -10,6 +10,7 @@ from .jackpot import Jackpot
 from .limit import Limit
 from .lobby import Lobby, Table
 from .prepared_game import PreparedGame
+from .self_validation import SelfValidation
 
 __all__ = (
     "BalanceNotification",
@@ -26,6 +27,7 @@ __all__ = (
     "Limit",
     "Lobby",
     "PreparedGame",
+    "SelfValidation",
     "SlotegratorObject",
     "SlotegratorType",
     "Table",

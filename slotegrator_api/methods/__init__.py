@@ -9,6 +9,7 @@ from .get_limits import GetLimits
 from .get_lobby_tables import GetLobbyTables
 from .init_demo_game import InitDemoGame
 from .init_game import InitGame
+from .self_validate import SelfValidate
 
 __all__ = (
     "BalanceNotify",
@@ -21,5 +22,6 @@ __all__ = (
     "GetLobbyTables",
     "InitDemoGame",
     "InitGame",
+    "SelfValidate",
     "SlotegratorMethod",
 )

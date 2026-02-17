@@ -12,6 +12,7 @@ from slotegrator_api.methods import (
     InitDemoGame,
     InitGame,
 )
+from slotegrator_api.methods.self_validate import SelfValidate
 from slotegrator_api.types import (
     BalanceNotification,
     FreespinBets,
@@ -23,6 +24,7 @@ from slotegrator_api.types import (
     PreparedGame,
     Table,
 )
+from slotegrator_api.types.self_validation import SelfValidation
 
 from .session import HTTPSession
 
@@ -163,4 +165,5 @@ class SlotegratorAPI:
     async def set_freevoucher_campaign(self): ...  # noqa: ANN201
     async def get_freevoucher_campaign(self): ...  # noqa: ANN201
     async def cancel_freevoucher_campaign(self): ...  # noqa: ANN201
-    async def self_validate(self): ...  # noqa: ANN201
+    async def self_validate(self) -> SelfValidation:
+        return await self._session(SelfValidate())
