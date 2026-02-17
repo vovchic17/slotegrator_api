@@ -1,9 +1,14 @@
+from datetime import datetime
 from typing import Literal
 
 from slotegrator_api.methods import (
     BalanceNotify,
+    CancelFreevoucherCampaign,
+    CancelSetCampaign,
     GetFreespinBets,
+    GetFreespinCampaign,
     GetFreespinLimits,
+    GetFreevoucherCampaign,
     GetGames,
     GetGameTags,
     GetJackpots,
@@ -11,20 +16,27 @@ from slotegrator_api.methods import (
     GetLobbyTables,
     InitDemoGame,
     InitGame,
+    SelfValidate,
+    SetFreespinCampaign,
+    SetFreevoucherCampaign,
 )
-from slotegrator_api.methods.self_validate import SelfValidate
 from slotegrator_api.types import (
     BalanceNotification,
+    CampaignCancel,
     FreespinBets,
+    FreespinCampaign,
     FreespinLimit,
+    FreespinSet,
+    FreevoucherCampaign,
+    FreevoucherSet,
     Game,
     GameTag,
     Jackpot,
     Limit,
     PreparedGame,
+    SelfValidation,
     Table,
 )
-from slotegrator_api.types.self_validation import SelfValidation
 
 from .session import HTTPSession
 
@@ -159,11 +171,93 @@ class SlotegratorAPI:
             ),
         )
 
-    async def set_freespin_campaign(self): ...  # noqa: ANN201
-    async def get_freespin_campaign(self): ...  # noqa: ANN201
-    async def cancel_set_camping(self): ...  # noqa: ANN201
-    async def set_freevoucher_campaign(self): ...  # noqa: ANN201
-    async def get_freevoucher_campaign(self): ...  # noqa: ANN201
-    async def cancel_freevoucher_campaign(self): ...  # noqa: ANN201
+    async def set_freespin_campaign(
+        self,
+        player_id: str,
+        player_name: str,
+        currency: str,
+        quantity: int,
+        valid_from: int,
+        valid_until: int,
+        freespin_id: str,
+        game_uuid: str,
+        bet_id: int | None = None,
+        total_bet_id: int | None = None,
+        denomination: float | None = None,
+    ) -> FreespinSet:
+        return await self._session(
+            SetFreespinCampaign(
+                player_id=player_id,
+                player_name=player_name,
+                currency=currency,
+                quantity=quantity,
+                valid_from=valid_from,
+                valid_until=valid_until,
+                freespin_id=freespin_id,
+                game_uuid=game_uuid,
+                bet_id=bet_id,
+                total_bet_id=total_bet_id,
+                denomination=denomination,
+            ),
+        )
+
+    async def get_freespin_campaign(
+        self,
+        freespin_id: str,
+    ) -> FreespinCampaign:
+        return await self._session(
+            GetFreespinCampaign(freespin_id=freespin_id),
+        )
+
+    async def cancel_set_campaign(self, freespin_id: str) -> CampaignCancel:
+        return await self._session(
+            CancelSetCampaign(freespin_id=freespin_id),
+        )
+
+    async def set_freevoucher_campaign(
+        self,
+        player_id: str,
+        title: str,
+        currency: str,
+        initial_balance: float,
+        max_winnings: float,
+        valid_until: datetime,
+        voucher_id: str,
+        table_ids: list[str],
+        short_terms: str | None = None,
+        terms_and_conds: str | None = None,
+    ) -> FreevoucherSet:
+        return await self._session(
+            SetFreevoucherCampaign(
+                player_id=player_id,
+                title=title,
+                currency=currency,
+                initial_balance=initial_balance,
+                max_winnings=max_winnings,
+                valid_until=valid_until,
+                voucher_id=voucher_id,
+                table_ids=table_ids,
+                short_terms=short_terms,
+                terms_and_conds=terms_and_conds,
+            ),
+        )
+
+    async def get_freevoucher_campaign(
+        self,
+        voucher_id: str,
+    ) -> FreevoucherCampaign:
+        return await self._session(
+            GetFreevoucherCampaign(voucher_id=voucher_id),
+        )
+
+    async def cancel_freevoucher_campaign(
+        self,
+        voucher_id: str,
+        reason: str,
+    ) -> CampaignCancel:
+        return await self._session(
+            CancelFreevoucherCampaign(voucher_id=voucher_id, reason=reason),
+        )
+
     async def self_validate(self) -> SelfValidation:
         return await self._session(SelfValidate())

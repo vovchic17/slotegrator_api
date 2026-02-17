@@ -10,17 +10,9 @@ async def main() -> None:
         base_api_url="https://staging.slotegrator.com/api/index.php/v1",
     )
 
-    # games = await client.get_games()
-    # p_game = await client.init_game(
-    #     games[0].uuid,
-    #     "123",
-    #     "test",
-    #     "EUR",
-    #     "123",
-    # )
-    # print(p_game)
-    val = await client.self_validate()
-    print(val)
+    games = await client.get_games()
+    # for game in games:
+    #     print(game.uuid)
 
     await client.close()
 
