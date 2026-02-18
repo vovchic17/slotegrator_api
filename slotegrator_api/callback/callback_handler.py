@@ -23,5 +23,5 @@ class CallbackHandler:
         )
         app.include_router(self.router)
 
-    def handler(self, method: Balance | Bet | Win | Refund | Rollback):
-        print(type(method))
+    def handler(self, method: Balance | Bet | Win | Refund | Rollback) -> None:
+        print(type(method))  # noqa: T201
