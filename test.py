@@ -1,21 +1,6 @@
-import asyncio
+from fastapi import FastAPI
 
-from slotegrator_api import SlotegratorAPI
+from slotegrator_api.callback.callback_handler import CallbackHandler
 
-
-async def main() -> None:
-    client = SlotegratorAPI(
-        merchant_id="b06bced7abc649cc077f2a6aef29d67c",
-        merchant_key="a192884aaae353c865e40f22c208d0a41ab29723",
-        base_api_url="https://staging.slotegrator.com/api/index.php/v1",
-    )
-
-    games = await client.get_games()
-    # for game in games:
-    #     print(game.uuid)
-
-    await client.close()
-
-
-if __name__ == "__main__":
-    asyncio.run(main())
+app = FastAPI()
+handler = CallbackHandler(app, "/callback")

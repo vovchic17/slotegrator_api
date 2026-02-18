@@ -1,5 +1,7 @@
-from datetime import datetime
+from datetime import UTC, datetime
 from http import HTTPMethod
+
+from pydantic import field_validator
 
 from slotegrator_api.types import FreevoucherSet
 
@@ -23,3 +25,12 @@ class SetFreevoucherCampaign(SlotegratorMethod[FreevoucherSet]):
     table_ids: list[str]
     short_terms: str | None
     terms_and_conds: str | None
+
+    @field_validator("valid_until", mode="before")
+    @classmethod
+    def validate_valid_until(cls, v: int | str) -> datetime:
+        if isinstance(v, int):
+            return datetime.fromtimestamp(v, tz=UTC)
+        if isinstance(v, str) and v.isdigit():
+            return datetime.fromtimestamp(int(v), tz=UTC)
+        raise ValueError
