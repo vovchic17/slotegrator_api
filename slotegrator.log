@@ -1,0 +1,3153 @@
+Use session with ID = 123
+Sending "balance" request with player_id = 123, currency = EUR and pass_session_id = 1
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "balance",
+        "player_id": "123",
+        "currency": "EUR",
+        "session_id": "123"
+    },
+    "response": {
+        "balance": 57.12
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580913",
+        "X-Nonce: b7ea11422cce4864985f77f24e9427fd",
+        "X-Sign: c2a057d136bb1aadb1650cbb513a35923b71c028"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1807,
+        "request_size": 369,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.611093,
+        "namelookup_time": 0.020972,
+        "connect_time": 0.032345,
+        "pretransfer_time": 0.071583,
+        "size_upload": 56,
+        "size_download": 17,
+        "speed_download": 27,
+        "speed_upload": 91,
+        "download_content_length": 17,
+        "upload_content_length": 56,
+        "starttransfer_time": 0.611001,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58666,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 71480,
+        "connect_time_us": 32345,
+        "namelookup_time_us": 20972,
+        "pretransfer_time_us": 71583,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 611001,
+        "total_time_us": 611093,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.6113200187683105,
+    "notificationExecutionTime sec": 0.6116797924041748
+}
+"balance" request successfully passed
+Sending incorrect "balance" request with not existing player_id = 13ed0483f470410bbd1daf66fd6dc4a7 and currency = EUR
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "balance",
+        "player_id": "13ed0483f470410bbd1daf66fd6dc4a7",
+        "currency": "EUR"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580914",
+        "X-Nonce: a3c25658553844ac9b64f65983e1bd8b",
+        "X-Sign: 085fe72c1782bae67bd545f8746a86db357e1a7b"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1807,
+        "request_size": 383,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.773393,
+        "namelookup_time": 0.021422,
+        "connect_time": 0.033872,
+        "pretransfer_time": 0.068977,
+        "size_upload": 70,
+        "size_download": 24,
+        "speed_download": 31,
+        "speed_upload": 90,
+        "download_content_length": 24,
+        "upload_content_length": 70,
+        "starttransfer_time": 0.773285,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58680,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 68874,
+        "connect_time_us": 33872,
+        "namelookup_time_us": 21422,
+        "pretransfer_time_us": 68977,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 773285,
+        "total_time_us": 773393,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.7735919952392578,
+    "notificationExecutionTime sec": 0.7751870155334473
+}
+Incorrect "balance" request successfully rejected
+Sending zero "bet" request with amount = 0, currency = EUR and ID = 0efb39bae2d6492a8a1789aa5063007b
+{
+    "pass_provider_round": 1,
+    "round_id": "2ad4f1faebdd450b91303ba7fc321930",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": 0,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "0efb39bae2d6492a8a1789aa5063007b",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "2ad4f1faebdd450b91303ba7fc321930"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580914",
+        "X-Nonce: f1473ce371234c4485e99757690938fa",
+        "X-Sign: 14fba177888b11a49b88b77c1798babd3dd2fdd4"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1911,
+        "request_size": 525,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.255944,
+        "namelookup_time": 0.025151,
+        "connect_time": 0.038456,
+        "pretransfer_time": 0.077347,
+        "size_upload": 211,
+        "size_download": 24,
+        "speed_download": 93,
+        "speed_upload": 824,
+        "download_content_length": 24,
+        "upload_content_length": 211,
+        "starttransfer_time": 0.255857,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58692,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 77240,
+        "connect_time_us": 38456,
+        "namelookup_time_us": 25151,
+        "pretransfer_time_us": 77347,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 255857,
+        "total_time_us": 255944,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.25611400604248047,
+    "notificationExecutionTime sec": 0.2576930522918701
+}
+Zero "bet" request failed
+Sending "win" request with amount = 13.7088, currency = EUR and ID = a6492731f050478596ef6668e89549c6
+{
+    "pass_provider_round": 1,
+    "round_id": "2ad4f1faebdd450b91303ba7fc321930",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": 13.7088,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "a6492731f050478596ef6668e89549c6",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "2ad4f1faebdd450b91303ba7fc321930"
+    },
+    "response": {
+        "balance": 70.8288,
+        "transaction_id": "995d981b"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580915",
+        "X-Nonce: 72c6e80e699d4e659b2d015e5e58d14a",
+        "X-Sign: c3f5f22b560e2a58bc4b59bef907304e04c5c3a6"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1807,
+        "request_size": 531,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.701238,
+        "namelookup_time": 0.025939,
+        "connect_time": 0.035172,
+        "pretransfer_time": 0.072827,
+        "size_upload": 217,
+        "size_download": 47,
+        "speed_download": 67,
+        "speed_upload": 309,
+        "download_content_length": 47,
+        "upload_content_length": 217,
+        "starttransfer_time": 0.70115,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58698,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 72735,
+        "connect_time_us": 35172,
+        "namelookup_time_us": 25939,
+        "pretransfer_time_us": 72827,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 701150,
+        "total_time_us": 701238,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.7014760971069336,
+    "notificationExecutionTime sec": 0.7031571865081787
+}
+"win" request successfully passed
+Sending duplicate "win" request with amount = 13.7088, currency = EUR and ID = a6492731f050478596ef6668e89549c6
+{
+    "pass_provider_round": 1,
+    "round_id": "2ad4f1faebdd450b91303ba7fc321930",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": 13.7088,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "a6492731f050478596ef6668e89549c6",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "2ad4f1faebdd450b91303ba7fc321930"
+    },
+    "response": {
+        "balance": 84.5376,
+        "transaction_id": "49dc15f4"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580915",
+        "X-Nonce: eda1f64a572849c6b58ebeb6179125c8",
+        "X-Sign: 5301818ef24aedb096cb2615464837fa652bd263"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1807,
+        "request_size": 531,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.75237,
+        "namelookup_time": 0.020068,
+        "connect_time": 0.038019,
+        "pretransfer_time": 0.079269,
+        "size_upload": 217,
+        "size_download": 47,
+        "speed_download": 62,
+        "speed_upload": 288,
+        "download_content_length": 47,
+        "upload_content_length": 217,
+        "starttransfer_time": 0.752261,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58710,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 79161,
+        "connect_time_us": 38019,
+        "namelookup_time_us": 20068,
+        "pretransfer_time_us": 79269,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 752261,
+        "total_time_us": 752370,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.7526209354400635,
+    "notificationExecutionTime sec": 0.7546980381011963
+}
+Duplicate "win" request failed. Balance should not be changed. Win amount = 13.7088, balance before win = 70.8288, returned balance = 84.5376
+Sending incorrect "refund" request for WIN with amount = 13.7088, currency = EUR and ID = a6492731f050478596ef6668e89549c6
+{
+    "pass_provider_round": 1,
+    "round_id": "232119734",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "refund",
+        "amount": 13.7088,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "1822f386a6d9499f98fdd204181ff94e",
+        "session_id": "123",
+        "bet_transaction_id": "a6492731f050478596ef6668e89549c6",
+        "round_id": "232119734"
+    },
+    "response": {
+        "balance": 84.5376,
+        "transaction_id": "ca58dd9f"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580916",
+        "X-Nonce: bac8b5f8d6444ff08d33acfccacc4b18",
+        "X-Sign: 76117d20fdbaa45a98a24e5a760bab1efff59479"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1807,
+        "request_size": 554,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.552931,
+        "namelookup_time": 0.01476,
+        "connect_time": 0.029867,
+        "pretransfer_time": 0.069076,
+        "size_upload": 240,
+        "size_download": 47,
+        "speed_download": 85,
+        "speed_upload": 434,
+        "download_content_length": 47,
+        "upload_content_length": 240,
+        "starttransfer_time": 0.552835,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58726,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 68965,
+        "connect_time_us": 29867,
+        "namelookup_time_us": 14760,
+        "pretransfer_time_us": 69076,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 552835,
+        "total_time_us": 552931,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.5531671047210693,
+    "notificationExecutionTime sec": 0.5548458099365234
+}
+Incorrect "refund" request for WIN failed. Balance should not be changed. Refund amount = 13.7088, balance before refund = 70.8288, returned balance = 84.5376
+Sending zero "win" request with amount = 0, currency = EUR and ID = 9eb9a576d2424aee8c2575af06694120
+{
+    "pass_provider_round": 1,
+    "round_id": "8b90bf405d714dd0a713a6f5d94da7ac",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": 0,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "9eb9a576d2424aee8c2575af06694120",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "8b90bf405d714dd0a713a6f5d94da7ac"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580917",
+        "X-Nonce: fd4b8e1d196a4e2f9e078eddc362ea81",
+        "X-Sign: a4624fb6cd2e463305cfafcc0e24dc67eff67b5e"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1807,
+        "request_size": 525,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.74432,
+        "namelookup_time": 0.009467,
+        "connect_time": 0.021443,
+        "pretransfer_time": 0.057319,
+        "size_upload": 211,
+        "size_download": 24,
+        "speed_download": 32,
+        "speed_upload": 283,
+        "download_content_length": 24,
+        "upload_content_length": 211,
+        "starttransfer_time": 0.744184,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58730,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 57203,
+        "connect_time_us": 21443,
+        "namelookup_time_us": 9467,
+        "pretransfer_time_us": 57319,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 744184,
+        "total_time_us": 744320,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.7445809841156006,
+    "notificationExecutionTime sec": 0.7465469837188721
+}
+Zero "win" request failed
+Sending zero "bet" request with amount = 0, currency = EUR and ID = 9cf1210271284d5181c37656c15d77e0
+{
+    "pass_provider_round": 1,
+    "round_id": "8b90bf405d714dd0a713a6f5d94da7ac",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": 0,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "9cf1210271284d5181c37656c15d77e0",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "8b90bf405d714dd0a713a6f5d94da7ac"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580917",
+        "X-Nonce: d2901f05af104c0db5c11c88fd0d6abc",
+        "X-Sign: 8823dd48e1b046a0d41c66a866aa5b491f8857a2"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1911,
+        "request_size": 525,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.20749,
+        "namelookup_time": 0.026303,
+        "connect_time": 0.039536,
+        "pretransfer_time": 0.079684,
+        "size_upload": 211,
+        "size_download": 24,
+        "speed_download": 115,
+        "speed_upload": 1016,
+        "download_content_length": 24,
+        "upload_content_length": 211,
+        "starttransfer_time": 0.207421,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58734,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 79585,
+        "connect_time_us": 39536,
+        "namelookup_time_us": 26303,
+        "pretransfer_time_us": 79684,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 207421,
+        "total_time_us": 207490,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.20766282081604004,
+    "notificationExecutionTime sec": 0.209273099899292
+}
+Zero "bet" request failed
+Sending zero "refund" request with amount = 0, currency = EUR and ID = 9cf1210271284d5181c37656c15d77e0
+{
+    "pass_provider_round": 1,
+    "round_id": "8b90bf405d714dd0a713a6f5d94da7ac",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "refund",
+        "amount": 0,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "89748942325140408853b39dbcbc4a48",
+        "session_id": "123",
+        "bet_transaction_id": "9cf1210271284d5181c37656c15d77e0",
+        "round_id": "8b90bf405d714dd0a713a6f5d94da7ac"
+    },
+    "response": {
+        "balance": 84.5376,
+        "transaction_id": "24c634c3"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580918",
+        "X-Nonce: ac1b86da3cb847f5a2f19018d0d53842",
+        "X-Sign: 0d868dfabea8be60c3bbe908e4dd5271e9dc40c4"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1807,
+        "request_size": 571,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.756415,
+        "namelookup_time": 0.014494,
+        "connect_time": 0.026918,
+        "pretransfer_time": 0.069546,
+        "size_upload": 257,
+        "size_download": 47,
+        "speed_download": 62,
+        "speed_upload": 339,
+        "download_content_length": 47,
+        "upload_content_length": 257,
+        "starttransfer_time": 0.75635,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58738,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 69443,
+        "connect_time_us": 26918,
+        "namelookup_time_us": 14494,
+        "pretransfer_time_us": 69546,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 756350,
+        "total_time_us": 756415,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.7566368579864502,
+    "notificationExecutionTime sec": 0.7585229873657227
+}
+Zero "refund" request failed. Refund amount = 0, balance before refund = 70.8288, returned balance = 84.5376
+Sending "bet" request with amount = 11.3326, currency = EUR and ID = 68bc84a593cb4769ad9e65008c4dd0c5
+{
+    "pass_provider_round": 1,
+    "round_id": "a3de7d300ef24114bd155f1197c7bc66",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": 11.3326,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "68bc84a593cb4769ad9e65008c4dd0c5",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "a3de7d300ef24114bd155f1197c7bc66"
+    },
+    "response": {
+        "balance": 73.205,
+        "transaction_id": "bbe0c34f"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580918",
+        "X-Nonce: e46222bdc0484a609b4149456a36e338",
+        "X-Sign: 46126e6e1ddf2b6c8a01d71d06b1acd5a921da09"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1911,
+        "request_size": 531,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.235684,
+        "namelookup_time": 0.009076,
+        "connect_time": 0.02066,
+        "pretransfer_time": 0.052383,
+        "size_upload": 217,
+        "size_download": 46,
+        "speed_download": 195,
+        "speed_upload": 920,
+        "download_content_length": 46,
+        "upload_content_length": 217,
+        "starttransfer_time": 0.235599,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58744,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 52293,
+        "connect_time_us": 20660,
+        "namelookup_time_us": 9076,
+        "pretransfer_time_us": 52383,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 235599,
+        "total_time_us": 235684,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.23588895797729492,
+    "notificationExecutionTime sec": 0.2375481128692627
+}
+"bet" request failed. Bet amount = 11.3326, balance before bet = 70.8288, returned balance = 73.205
+Sending duplicate "bet" request with amount = 11.3326, currency = EUR and ID = 68bc84a593cb4769ad9e65008c4dd0c5
+{
+    "pass_provider_round": 1,
+    "round_id": "a3de7d300ef24114bd155f1197c7bc66",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": 11.3326,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "68bc84a593cb4769ad9e65008c4dd0c5",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "a3de7d300ef24114bd155f1197c7bc66"
+    },
+    "response": {
+        "balance": 61.8724,
+        "transaction_id": "42b52503"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580919",
+        "X-Nonce: a81027120a04457b8c2a41aaae51c685",
+        "X-Sign: 34d7a80fe0768bb66adb2e034472c0f118ee1446"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1807,
+        "request_size": 531,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.682161,
+        "namelookup_time": 0.025131,
+        "connect_time": 0.039751,
+        "pretransfer_time": 0.078561,
+        "size_upload": 217,
+        "size_download": 47,
+        "speed_download": 68,
+        "speed_upload": 318,
+        "download_content_length": 47,
+        "upload_content_length": 217,
+        "starttransfer_time": 0.682063,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58760,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 78446,
+        "connect_time_us": 39751,
+        "namelookup_time_us": 25131,
+        "pretransfer_time_us": 78561,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 682063,
+        "total_time_us": 682161,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.6824440956115723,
+    "notificationExecutionTime sec": 0.6840629577636719
+}
+Duplicate "bet" request failed. Balance should not be changed. Bet amount = 11.3326, balance before bet = 70.8288, returned balance = 61.8724
+Sending "refund" request with amount = 11.3326, currency = EUR and ID = 68bc84a593cb4769ad9e65008c4dd0c5
+{
+    "pass_provider_round": 1,
+    "round_id": "0cc79715e40e48e0a0a18273b4af2b6d",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "refund",
+        "amount": 11.3326,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "5669bca4b3b4485ab78c1bf42b8acca9",
+        "session_id": "123",
+        "bet_transaction_id": "68bc84a593cb4769ad9e65008c4dd0c5",
+        "round_id": "0cc79715e40e48e0a0a18273b4af2b6d"
+    },
+    "response": {
+        "balance": 61.8724,
+        "transaction_id": "31f1c3d8"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580919",
+        "X-Nonce: d0e26ecbe86f41d9acbbd4abe3308dcc",
+        "X-Sign: db28685fd9e2ffd5c058d57740c56296ebbbd41b"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1807,
+        "request_size": 577,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.675769,
+        "namelookup_time": 0.021262,
+        "connect_time": 0.037055,
+        "pretransfer_time": 0.075133,
+        "size_upload": 263,
+        "size_download": 47,
+        "speed_download": 69,
+        "speed_upload": 389,
+        "download_content_length": 47,
+        "upload_content_length": 263,
+        "starttransfer_time": 0.675696,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58762,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 75038,
+        "connect_time_us": 37055,
+        "namelookup_time_us": 21262,
+        "pretransfer_time_us": 75133,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 675696,
+        "total_time_us": 675769,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.675987958908081,
+    "notificationExecutionTime sec": 0.677436113357544
+}
+"refund" request failed. Refund amount = 11.3326, balance before refund = 70.8288, returned balance = 61.8724
+Sending duplicate "refund" request with amount = 11.3326, currency = EUR and ID = 68bc84a593cb4769ad9e65008c4dd0c5
+{
+    "pass_provider_round": 1,
+    "round_id": "0cc79715e40e48e0a0a18273b4af2b6d",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "refund",
+        "amount": 11.3326,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "f44135bfa11f4fd089d91f067c2b553a",
+        "session_id": "123",
+        "bet_transaction_id": "68bc84a593cb4769ad9e65008c4dd0c5",
+        "round_id": "0cc79715e40e48e0a0a18273b4af2b6d"
+    },
+    "response": {
+        "balance": 61.8724,
+        "transaction_id": "773c8b8b"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580920",
+        "X-Nonce: b797f60193ca4693ad86a08758749f7d",
+        "X-Sign: 4b266c49cb4ee282f71bb6a1a2731e8384a0b642"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1911,
+        "request_size": 577,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.269198,
+        "namelookup_time": 0.014509,
+        "connect_time": 0.02711,
+        "pretransfer_time": 0.076243,
+        "size_upload": 263,
+        "size_download": 47,
+        "speed_download": 174,
+        "speed_upload": 976,
+        "download_content_length": 47,
+        "upload_content_length": 263,
+        "starttransfer_time": 0.26909,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58778,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 76117,
+        "connect_time_us": 27110,
+        "namelookup_time_us": 14509,
+        "pretransfer_time_us": 76243,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 269090,
+        "total_time_us": 269198,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.2693901062011719,
+    "notificationExecutionTime sec": 0.2708277702331543
+}
+Duplicate "refund" request failed. Balance should not be changed. Refund amount = 11.3326, balance before refund = 70.8288, returned balance = 61.8724
+Sending "bet" request with amount = 17.7072, currency = EUR and ID = f1e4abff3725427b859105ae6d0edae0
+{
+    "pass_provider_round": 1,
+    "round_id": "360086114",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": 17.7072,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "f1e4abff3725427b859105ae6d0edae0",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "360086114"
+    },
+    "response": {
+        "balance": 44.1652,
+        "transaction_id": "6791d548"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580920",
+        "X-Nonce: 31a8202830d041c687391df1429e1d4c",
+        "X-Sign: a6f719dda5bbe35d992dc448861551962443ec2b"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1806,
+        "request_size": 508,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.656835,
+        "namelookup_time": 0.009181,
+        "connect_time": 0.021742,
+        "pretransfer_time": 0.065068,
+        "size_upload": 194,
+        "size_download": 47,
+        "speed_download": 71,
+        "speed_upload": 295,
+        "download_content_length": 47,
+        "upload_content_length": 194,
+        "starttransfer_time": 0.656759,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58794,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 64962,
+        "connect_time_us": 21742,
+        "namelookup_time_us": 9181,
+        "pretransfer_time_us": 65068,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 656759,
+        "total_time_us": 656835,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.6570460796356201,
+    "notificationExecutionTime sec": 0.6585619449615479
+}
+"bet" request failed. Bet amount = 17.7072, balance before bet = 70.8288, returned balance = 44.1652
+Sending "refund" request without round id with amount = 17.7072, currency = EUR and ID = f1e4abff3725427b859105ae6d0edae0
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "refund",
+        "amount": 17.7072,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "8b8b7083432542a88bc028edb7f3bbe2",
+        "session_id": "123",
+        "bet_transaction_id": "f1e4abff3725427b859105ae6d0edae0"
+    },
+    "response": {
+        "balance": 44.1652,
+        "transaction_id": "11b8eba0"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580921",
+        "X-Nonce: a6e5381101e34e189a43f10180c0a97f",
+        "X-Sign: eb494bea04b5e69c36402918639231b7d1c97f38"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1911,
+        "request_size": 535,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.248064,
+        "namelookup_time": 0.009387,
+        "connect_time": 0.022737,
+        "pretransfer_time": 0.061903,
+        "size_upload": 221,
+        "size_download": 47,
+        "speed_download": 189,
+        "speed_upload": 890,
+        "download_content_length": 47,
+        "upload_content_length": 221,
+        "starttransfer_time": 0.247976,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 58804,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 61794,
+        "connect_time_us": 22737,
+        "namelookup_time_us": 9387,
+        "pretransfer_time_us": 61903,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 247976,
+        "total_time_us": 248064,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.24836397171020508,
+    "notificationExecutionTime sec": 0.25060486793518066
+}
+"refund" without round id request failed. Refund amount = 17.7072, balance before refund = 70.8288, returned balance = 44.1652
+Sending "bet" request with amount = 4.2497, currency = EUR and ID = 14103f5b16b543ad91e75b977bf61fe5
+{
+    "pass_provider_round": 1,
+    "round_id": "408150247",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": 4.2497,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "14103f5b16b543ad91e75b977bf61fe5",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "408150247"
+    },
+    "response": {
+        "balance": 39.9155,
+        "transaction_id": "8ae253f2"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580921",
+        "X-Nonce: 4ff7f16a66784a668794edadf28794b7",
+        "X-Sign: a005d13b0620731c30dadc95eaa9640b736ec033"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1911,
+        "request_size": 507,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.244101,
+        "namelookup_time": 0.015506,
+        "connect_time": 0.028029,
+        "pretransfer_time": 0.069137,
+        "size_upload": 193,
+        "size_download": 47,
+        "speed_download": 192,
+        "speed_upload": 790,
+        "download_content_length": 47,
+        "upload_content_length": 193,
+        "starttransfer_time": 0.244023,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 49918,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 69033,
+        "connect_time_us": 28029,
+        "namelookup_time_us": 15506,
+        "pretransfer_time_us": 69137,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 244023,
+        "total_time_us": 244101,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.24431395530700684,
+    "notificationExecutionTime sec": 0.24605202674865723
+}
+"bet" request failed. Bet amount = 4.2497, balance before bet = 70.8288, returned balance = 39.9155
+Sending "win" request with amount = 14.1658, currency = EUR and ID = 26aaa0164e2041d3846fe9b1300da43e
+{
+    "pass_provider_round": 1,
+    "round_id": "408150247",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": 14.1658,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "26aaa0164e2041d3846fe9b1300da43e",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "408150247"
+    },
+    "response": {
+        "balance": 54.0813,
+        "transaction_id": "9d3dc8d8"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580921",
+        "X-Nonce: 46bfe07ae7564018a7907f8c61c7881a",
+        "X-Sign: 24fdf16e2023626b98f89e38df45196324ef04c0"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1911,
+        "request_size": 508,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.237912,
+        "namelookup_time": 0.008969,
+        "connect_time": 0.022667,
+        "pretransfer_time": 0.058251,
+        "size_upload": 194,
+        "size_download": 47,
+        "speed_download": 197,
+        "speed_upload": 815,
+        "download_content_length": 47,
+        "upload_content_length": 194,
+        "starttransfer_time": 0.237836,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 49928,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 58154,
+        "connect_time_us": 22667,
+        "namelookup_time_us": 8969,
+        "pretransfer_time_us": 58251,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 237836,
+        "total_time_us": 237912,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.2381589412689209,
+    "notificationExecutionTime sec": 0.23970293998718262
+}
+"win" request failed. Win amount = 14.1658, balance before win = 70.8288, returned balance = 54.0813
+Sending zero "win" request with amount = 0, currency = EUR and ID = f990dc0f013941bba1f391cfd5e3a74b
+{
+    "pass_provider_round": 1,
+    "round_id": "408150247",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": 0,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "f990dc0f013941bba1f391cfd5e3a74b",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "408150247"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580922",
+        "X-Nonce: 87c4df830ca74aaeaba2757432735159",
+        "X-Sign: a74b3a9e165e3a025cec2d24ac166bd36ca30ab2"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1911,
+        "request_size": 502,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.227199,
+        "namelookup_time": 0.030816,
+        "connect_time": 0.044155,
+        "pretransfer_time": 0.082647,
+        "size_upload": 188,
+        "size_download": 24,
+        "speed_download": 105,
+        "speed_upload": 827,
+        "download_content_length": 24,
+        "upload_content_length": 188,
+        "starttransfer_time": 0.227121,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 49934,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 82540,
+        "connect_time_us": 44155,
+        "namelookup_time_us": 30816,
+        "pretransfer_time_us": 82647,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 227121,
+        "total_time_us": 227199,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.22744107246398926,
+    "notificationExecutionTime sec": 0.22906899452209473
+}
+Zero "win" request failed
+Sending "win" request with amount = 15.5823, currency = EUR and ID = ecdacc07b05e40d4845d1d085f9d2781
+{
+    "pass_provider_round": 1,
+    "round_id": "408150247",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": 15.5823,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "ecdacc07b05e40d4845d1d085f9d2781",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "408150247"
+    },
+    "response": {
+        "balance": 69.6636,
+        "transaction_id": "3f647690"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580922",
+        "X-Nonce: 47138510e2a749dbbac4395ab1763c99",
+        "X-Sign: b8e7db887a98acb3cf3a3a69ec6ebafbeb9bc085"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1807,
+        "request_size": 508,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.692039,
+        "namelookup_time": 0.008881,
+        "connect_time": 0.021529,
+        "pretransfer_time": 0.060628,
+        "size_upload": 194,
+        "size_download": 47,
+        "speed_download": 67,
+        "speed_upload": 280,
+        "download_content_length": 47,
+        "upload_content_length": 194,
+        "starttransfer_time": 0.691949,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 49936,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 60518,
+        "connect_time_us": 21529,
+        "namelookup_time_us": 8881,
+        "pretransfer_time_us": 60628,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 691949,
+        "total_time_us": 692039,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.6922831535339355,
+    "notificationExecutionTime sec": 0.6938068866729736
+}
+"win" request failed. Win amount = 15.5823, balance before win = 70.8288, returned balance = 69.6636
+Sending duplicate "win" request with amount = 15.5823, currency = EUR and ID = ecdacc07b05e40d4845d1d085f9d2781
+{
+    "pass_provider_round": 1,
+    "round_id": "408150247",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": 15.5823,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "ecdacc07b05e40d4845d1d085f9d2781",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "408150247"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580923",
+        "X-Nonce: c9c7cda0c37c48d682c12b11ca186fdd",
+        "X-Sign: b4d40a100c239c3076314fc02a097b6d1083c92b"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 508,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.001977,
+        "namelookup_time": 0.019993,
+        "connect_time": 0.032326,
+        "pretransfer_time": 0.084757,
+        "size_upload": 194,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 64,
+        "download_content_length": -1,
+        "upload_content_length": 194,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 49950,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 84624,
+        "connect_time_us": 32326,
+        "namelookup_time_us": 19993,
+        "pretransfer_time_us": 84757,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3001977,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.0022389888763428,
+    "notificationExecutionTime sec": 3.003990888595581
+}
+Duplicate "win" request failed
+Sending "win" request with amount = 1.4166, currency = EUR and ID = 9c2ed1e94e3d445282354802732272da
+{
+    "pass_provider_round": 1,
+    "round_id": "408150247",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": 1.4166,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "9c2ed1e94e3d445282354802732272da",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "408150247"
+    },
+    "response": {
+        "balance": 71.0802,
+        "transaction_id": "42aed45d"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580926",
+        "X-Nonce: 5777638a90cd47a1a3cb1ca0e8ba718e",
+        "X-Sign: 3063c02ea001650396a9c6d2ece091d14ef452f7"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1911,
+        "request_size": 507,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.243665,
+        "namelookup_time": 0.014993,
+        "connect_time": 0.027626,
+        "pretransfer_time": 0.065808,
+        "size_upload": 193,
+        "size_download": 47,
+        "speed_download": 192,
+        "speed_upload": 792,
+        "download_content_length": 47,
+        "upload_content_length": 193,
+        "starttransfer_time": 0.24359,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 49964,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 65701,
+        "connect_time_us": 27626,
+        "namelookup_time_us": 14993,
+        "pretransfer_time_us": 65808,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 243590,
+        "total_time_us": 243665,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.24385404586791992,
+    "notificationExecutionTime sec": 0.24534106254577637
+}
+"win" request failed. Win amount = 1.4166, balance before win = 70.8288, returned balance = 71.0802
+{
+    "pass_provider_round": 1,
+    "round_id": "603488347",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": 0,
+        "currency": "EUR",
+        "game_uuid": "276438dabec43dde0dff4ea95e2e79d27d99d118",
+        "player_id": "123",
+        "transaction_id": "8a11fc89359540ff9449830ce9852419",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "603488347"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580926",
+        "X-Nonce: 21f6013e87f741dcab6d092948d9ed46",
+        "X-Sign: 32f94cee0c1d9b206db6f4f65c91a0b9cf8452aa"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1911,
+        "request_size": 502,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.25771,
+        "namelookup_time": 0.021263,
+        "connect_time": 0.031951,
+        "pretransfer_time": 0.071691,
+        "size_upload": 188,
+        "size_download": 24,
+        "speed_download": 93,
+        "speed_upload": 729,
+        "download_content_length": 24,
+        "upload_content_length": 188,
+        "starttransfer_time": 0.257614,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 49966,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 71582,
+        "connect_time_us": 31951,
+        "namelookup_time_us": 21263,
+        "pretransfer_time_us": 71691,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 257614,
+        "total_time_us": 257710,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.2579340934753418,
+    "notificationExecutionTime sec": 0.2598690986633301
+}
+"Bet with changed game uuid" request failed
+{
+    "pass_provider_round": 1,
+    "round_id": "603488347",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": 0,
+        "currency": "EUR",
+        "game_uuid": "276438dabec43dde0dff4ea95e2e79d27d99d118",
+        "player_id": "123",
+        "transaction_id": "ae9a5dac3a4f479dae77b7131c597554",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "603488347"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580926",
+        "X-Nonce: a176a87adce2419ebfda96b35d9a5abf",
+        "X-Sign: 0754f7ee4b0e62a254ccf276b312da1989635d31"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 502,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.002061,
+        "namelookup_time": 0.008942,
+        "connect_time": 0.021698,
+        "pretransfer_time": 0.059976,
+        "size_upload": 188,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 62,
+        "download_content_length": -1,
+        "upload_content_length": 188,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 49972,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 59870,
+        "connect_time_us": 21698,
+        "namelookup_time_us": 8942,
+        "pretransfer_time_us": 59976,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3002061,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.002300977706909,
+    "notificationExecutionTime sec": 3.004049062728882
+}
+"Win with changed game uuid" request failed
+Sending "refund" request without "bet" with amount = 0, currency = EUR and ID = d9dc3c462c634558bfe1dbde7efa65c4
+{
+    "pass_provider_round": 1,
+    "round_id": "76f69ea62f394f4aafdf5788522a89aa",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "refund",
+        "amount": 0,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "68e77b7a9f8043c4b77291422a1417b3",
+        "session_id": "123",
+        "bet_transaction_id": "d9dc3c462c634558bfe1dbde7efa65c4",
+        "round_id": "76f69ea62f394f4aafdf5788522a89aa"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580929",
+        "X-Nonce: eda8ccc4a190490cb71f22aa54b190d9",
+        "X-Sign: 37dd0285f48d555748d418f8fad27a965a993091"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 571,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.002825,
+        "namelookup_time": 0.021855,
+        "connect_time": 0.034627,
+        "pretransfer_time": 0.074045,
+        "size_upload": 257,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 85,
+        "download_content_length": -1,
+        "upload_content_length": 257,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 49980,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 73941,
+        "connect_time_us": 34627,
+        "namelookup_time_us": 21855,
+        "pretransfer_time_us": 74045,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3002825,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.003103017807007,
+    "notificationExecutionTime sec": 3.004703998565674
+}
+"refund" request without "bet" failed
+Sending exceeded "bet" request with amount = 71.8288, currency = EUR and ID = ce835938f38043cc885888a650297365
+{
+    "pass_provider_round": 1,
+    "round_id": "779364800",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": 71.8288,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "ce835938f38043cc885888a650297365",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "779364800"
+    },
+    "response": {
+        "balance": -0.7485999999999962,
+        "transaction_id": "75ba475d"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580932",
+        "X-Nonce: c50f1e99f6434f86aa4bbfdb15a4da93",
+        "X-Sign: 56384aa217f0d33b36ad1ab53830bd7f17f7d340"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1808,
+        "request_size": 508,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.760355,
+        "namelookup_time": 0.009579,
+        "connect_time": 0.022205,
+        "pretransfer_time": 0.05917,
+        "size_upload": 194,
+        "size_download": 59,
+        "speed_download": 77,
+        "speed_upload": 255,
+        "download_content_length": 59,
+        "upload_content_length": 194,
+        "starttransfer_time": 0.760282,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 12516,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 59070,
+        "connect_time_us": 22205,
+        "namelookup_time_us": 9579,
+        "pretransfer_time_us": 59170,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 760282,
+        "total_time_us": 760355,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.760551929473877,
+    "notificationExecutionTime sec": 0.7622079849243164
+}
+Exceeded "bet" request should fail, but it's passed
+Sending "refund" request with amount = 71.8288, currency = EUR and ID = ce835938f38043cc885888a650297365
+{
+    "pass_provider_round": 1,
+    "round_id": "779364800",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "refund",
+        "amount": 71.8288,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "1a677136c5a94c6188a3835f6439560d",
+        "session_id": "123",
+        "bet_transaction_id": "ce835938f38043cc885888a650297365",
+        "round_id": "779364800"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580933",
+        "X-Nonce: 0011ec8dd63e49f6865de7f3ded28234",
+        "X-Sign: e6a58c3a098d73ae1fc6bf5090e99f2d4c6537bf"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 554,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.002582,
+        "namelookup_time": 0.015333,
+        "connect_time": 0.024966,
+        "pretransfer_time": 0.064252,
+        "size_upload": 240,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 79,
+        "download_content_length": -1,
+        "upload_content_length": 240,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 12524,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 64159,
+        "connect_time_us": 24966,
+        "namelookup_time_us": 15333,
+        "pretransfer_time_us": 64252,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3002582,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.0028250217437744,
+    "notificationExecutionTime sec": 3.0044710636138916
+}
+"refund" request failed
+Check signature validation
+{
+    "pass_provider_round": 1,
+    "round_id": "8fe65495d7104d67a892189a36078826",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": 9.916,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "a4e641b8e46b4966970b388c133c8e92",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "8fe65495d7104d67a892189a36078826"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580936",
+        "X-Nonce: 58a42fbebd094a80baf6480dd516b6ff",
+        "X-Sign: 3020f3f14e0e14599f78e5afb0430b5bbb56a2db"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 529,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.002262,
+        "namelookup_time": 0.014969,
+        "connect_time": 0.027567,
+        "pretransfer_time": 0.063262,
+        "size_upload": 215,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 71,
+        "download_content_length": -1,
+        "upload_content_length": 215,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 12534,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 63164,
+        "connect_time_us": 27567,
+        "namelookup_time_us": 14969,
+        "pretransfer_time_us": 63262,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3002262,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.002485990524292,
+    "notificationExecutionTime sec": 3.002690076828003
+}
+Signature validation passed
+Sending "bet" with full balance amount = 70.8288, currency = EUR and ID = 83824de08c4a4b8fa80a53140073bde9
+{
+    "pass_provider_round": 1,
+    "round_id": "8fe65495d7104d67a892189a36078826",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": 70.8288,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "83824de08c4a4b8fa80a53140073bde9",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "8fe65495d7104d67a892189a36078826"
+    },
+    "response": {
+        "balance": -71.5774,
+        "transaction_id": "b9c2b48a"
+    },
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580939",
+        "X-Nonce: e906c68691864be2b296771650b6c3ae",
+        "X-Sign: 556386c3455402872d7a626320c8578f635930d9"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 200,
+        "header_size": 1807,
+        "request_size": 531,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.75411,
+        "namelookup_time": 0.00878,
+        "connect_time": 0.021188,
+        "pretransfer_time": 0.065195,
+        "size_upload": 217,
+        "size_download": 48,
+        "speed_download": 63,
+        "speed_upload": 287,
+        "download_content_length": 48,
+        "upload_content_length": 217,
+        "starttransfer_time": 0.753996,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 12546,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 65090,
+        "connect_time_us": 21188,
+        "namelookup_time_us": 8780,
+        "pretransfer_time_us": 65195,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 753996,
+        "total_time_us": 754110,
+        "effective_method": "POST"
+    },
+    "clientExecutionTime sec": 0.7543308734893799,
+    "notificationExecutionTime sec": 0.754612922668457
+}
+Sending "win" request with amount = 35.00, currency = EUR and ID = 36c95669c4874e4e8410d2a26a73e083
+{
+    "pass_provider_round": 1,
+    "round_id": "8fe65495d7104d67a892189a36078826",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": 35,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "36c95669c4874e4e8410d2a26a73e083",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "8fe65495d7104d67a892189a36078826"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580940",
+        "X-Nonce: 362baa3e4d7a4284af551adea970b2be",
+        "X-Sign: 8bb56bc9100ef40948326dd5409c3672a428cab2"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 526,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.0026,
+        "namelookup_time": 0.009138,
+        "connect_time": 0.021834,
+        "pretransfer_time": 0.062023,
+        "size_upload": 212,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 70,
+        "download_content_length": -1,
+        "upload_content_length": 212,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 12562,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 61881,
+        "connect_time_us": 21834,
+        "namelookup_time_us": 9138,
+        "pretransfer_time_us": 62023,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3002600,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.002872943878174,
+    "notificationExecutionTime sec": 3.004523992538452
+}
+"win" request failed
+Check transaction_id in response
+Sending "bet" request with amount = -4.2946, currency = EUR and ID = 726770e1916f4a07ab5c85f8f9a03dc3
+{
+    "pass_provider_round": 1,
+    "round_id": "8fe65495d7104d67a892189a36078826",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": -4.2946,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "726770e1916f4a07ab5c85f8f9a03dc3",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "8fe65495d7104d67a892189a36078826"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580943",
+        "X-Nonce: 644657a457374bc688b868f0f50308d0",
+        "X-Sign: 09c09d286965d131e972abe17f409265561a8e83"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 531,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.002772,
+        "namelookup_time": 0.009098,
+        "connect_time": 0.020917,
+        "pretransfer_time": 0.05942,
+        "size_upload": 217,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 72,
+        "download_content_length": -1,
+        "upload_content_length": 217,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 56520,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 59319,
+        "connect_time_us": 20917,
+        "namelookup_time_us": 9098,
+        "pretransfer_time_us": 59420,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3002772,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.002997875213623,
+    "notificationExecutionTime sec": 3.004517078399658
+}
+Transaction id validation failed during the "bet" request
+Sending "rollback" request after round of "bet" "win" with currency = EUR
+{
+    "pass_provider_round": 1,
+    "round_id": "7106cbce58f247d9b8738b9c3228ab6c",
+    "pass_provider_is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": -10.0208,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "cc42d56cb6d9453c9bbd00a35eb6bfd7",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "7106cbce58f247d9b8738b9c3228ab6c"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580946",
+        "X-Nonce: dfbfb551aaab454b8a0ce78ba568e1b1",
+        "X-Sign: bfa83248eb090c39ec6ca163cf08f39e8e0e5d90"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1807,
+        "request_size": 532,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.738013,
+        "namelookup_time": 0.0092,
+        "connect_time": 0.022144,
+        "pretransfer_time": 0.060302,
+        "size_upload": 218,
+        "size_download": 24,
+        "speed_download": 32,
+        "speed_upload": 295,
+        "download_content_length": 24,
+        "upload_content_length": 218,
+        "starttransfer_time": 0.737931,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 56534,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 60201,
+        "connect_time_us": 22144,
+        "namelookup_time_us": 9200,
+        "pretransfer_time_us": 60302,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 737931,
+        "total_time_us": 738013,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.7382268905639648,
+    "notificationExecutionTime sec": 0.7398581504821777
+}
+"bet" request failed
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "rollback",
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "8e6097c65aa34c118bbb2f6679f13cbd",
+        "rollback_transactions": [
+            {
+                "action": "bet",
+                "amount": "-10.0208",
+                "transaction_id": "cc42d56cb6d9453c9bbd00a35eb6bfd7",
+                "type": "bet"
+            },
+            {
+                "action": "win",
+                "amount": "-17.1786",
+                "transaction_id": "6108ee91e2ef499da86623557c986cdf",
+                "type": "win"
+            }
+        ],
+        "session_id": "123",
+        "type": "rollback"
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580946",
+        "X-Nonce: d120f77f9efa4b1b96c4e539acde3b6a",
+        "X-Sign: e5884d39bc162916990d60b8576b79eea77b24f7"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1911,
+        "request_size": 924,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.249157,
+        "namelookup_time": 0.019741,
+        "connect_time": 0.032228,
+        "pretransfer_time": 0.07027,
+        "size_upload": 610,
+        "size_download": 24,
+        "speed_download": 96,
+        "speed_upload": 2448,
+        "download_content_length": 24,
+        "upload_content_length": 610,
+        "starttransfer_time": 0.249082,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 56542,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 70146,
+        "connect_time_us": 32228,
+        "namelookup_time_us": 19741,
+        "pretransfer_time_us": 70270,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 249082,
+        "total_time_us": 249157,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.24936890602111816,
+    "notificationExecutionTime sec": 0.250946044921875
+}
+"rollback" request failed
+Sending "bet" request with amount = -11.4524, currency = EUR and ID = 8a2bd196a540410390ca70bf769d8eea
+{
+    "pass_provider_round": 1,
+    "round_id": "01c8bbc10d074361a79459b00451a06c",
+    "pass_provider_is_finished": 1,
+    "is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": -11.4524,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "8a2bd196a540410390ca70bf769d8eea",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "01c8bbc10d074361a79459b00451a06c",
+        "finished": false
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580947",
+        "X-Nonce: bba0b793697141fa9217cb077ec56a09",
+        "X-Sign: e4106ff69c887af8fbcd8cbd5dd3be1b5527569d"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1808,
+        "request_size": 543,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.495142,
+        "namelookup_time": 0.019919,
+        "connect_time": 0.033598,
+        "pretransfer_time": 0.072323,
+        "size_upload": 229,
+        "size_download": 24,
+        "speed_download": 48,
+        "speed_upload": 462,
+        "download_content_length": 24,
+        "upload_content_length": 229,
+        "starttransfer_time": 0.495038,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 56548,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 72220,
+        "connect_time_us": 33598,
+        "namelookup_time_us": 19919,
+        "pretransfer_time_us": 72323,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 495038,
+        "total_time_us": 495142,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.49536776542663574,
+    "notificationExecutionTime sec": 0.4969930648803711
+}
+"bet" request failed
+Sending "win" request with amount = -7.8735, currency = EUR and ID = 581baa6eadca49c398e1fb2beb9e13e7
+{
+    "pass_provider_round": 1,
+    "round_id": "01c8bbc10d074361a79459b00451a06c",
+    "pass_provider_is_finished": 1,
+    "is_finished": true
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": -7.8735,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "581baa6eadca49c398e1fb2beb9e13e7",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "01c8bbc10d074361a79459b00451a06c",
+        "finished": true
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580947",
+        "X-Nonce: d2f82e5c7e8c42379248afd653e0d54b",
+        "X-Sign: fdf72f7cc1f53b601c5eefe9c95edd4aed9a655a"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1808,
+        "request_size": 542,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.767494,
+        "namelookup_time": 0.019583,
+        "connect_time": 0.032958,
+        "pretransfer_time": 0.074603,
+        "size_upload": 228,
+        "size_download": 24,
+        "speed_download": 31,
+        "speed_upload": 297,
+        "download_content_length": 24,
+        "upload_content_length": 228,
+        "starttransfer_time": 0.767391,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 56554,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 74501,
+        "connect_time_us": 32958,
+        "namelookup_time_us": 19583,
+        "pretransfer_time_us": 74603,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 767391,
+        "total_time_us": 767494,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.767704963684082,
+    "notificationExecutionTime sec": 0.7694568634033203
+}
+Sending "bet" request with amount = -2.8631, currency = EUR and ID = fbaf92fc8b484e979a813c26a120e2ed
+{
+    "pass_provider_round": 1,
+    "round_id": "258512870",
+    "pass_provider_is_finished": 1,
+    "is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": -2.8631,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "fbaf92fc8b484e979a813c26a120e2ed",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "258512870",
+        "finished": false
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580948",
+        "X-Nonce: ca73184bd5834ba1a3ec2f821e467ffc",
+        "X-Sign: 95bae89053ceac91d63cbea5a7d0496c7bcabaa1"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1911,
+        "request_size": 519,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.191013,
+        "namelookup_time": 0.019699,
+        "connect_time": 0.033227,
+        "pretransfer_time": 0.070117,
+        "size_upload": 205,
+        "size_download": 24,
+        "speed_download": 125,
+        "speed_upload": 1073,
+        "download_content_length": 24,
+        "upload_content_length": 205,
+        "starttransfer_time": 0.190943,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 56570,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 70016,
+        "connect_time_us": 33227,
+        "namelookup_time_us": 19699,
+        "pretransfer_time_us": 70117,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 190943,
+        "total_time_us": 191013,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.1912081241607666,
+    "notificationExecutionTime sec": 0.19275784492492676
+}
+"bet" request failed
+Sending "bet" request with amount = -16.4628, currency = EUR and ID = 635c69d7c2f34ffc8dd7a992d1d3137c
+{
+    "pass_provider_round": 1,
+    "round_id": "258512870",
+    "pass_provider_is_finished": 1,
+    "is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": -16.4628,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "635c69d7c2f34ffc8dd7a992d1d3137c",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "258512870",
+        "finished": false
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580948",
+        "X-Nonce: c0b8771b36714df3bc0ae56a1ab2570b",
+        "X-Sign: 38b609b58eed18d3a6d2251a48c0040f8a1a9c93"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1911,
+        "request_size": 520,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.180687,
+        "namelookup_time": 0.008511,
+        "connect_time": 0.020882,
+        "pretransfer_time": 0.059489,
+        "size_upload": 206,
+        "size_download": 24,
+        "speed_download": 132,
+        "speed_upload": 1140,
+        "download_content_length": 24,
+        "upload_content_length": 206,
+        "starttransfer_time": 0.180609,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 56578,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 59378,
+        "connect_time_us": 20882,
+        "namelookup_time_us": 8511,
+        "pretransfer_time_us": 59489,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 180609,
+        "total_time_us": 180687,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.18089509010314941,
+    "notificationExecutionTime sec": 0.1824660301208496
+}
+"bet" request failed
+Sending "win" request with amount = -2.8631, currency = EUR and ID = cd5ad6dbc6134f198afc3bfc08e08ee0
+{
+    "pass_provider_round": 1,
+    "round_id": "258512870",
+    "pass_provider_is_finished": 1,
+    "is_finished": true
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": -2.8631,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "cd5ad6dbc6134f198afc3bfc08e08ee0",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "258512870",
+        "finished": true
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580948",
+        "X-Nonce: ece6176a04814ec7baafe89bbaf06a8c",
+        "X-Sign: 4f09871cdc70d20891243d8988f26bb9b0c5f5a9"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1808,
+        "request_size": 519,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.61572,
+        "namelookup_time": 0.019813,
+        "connect_time": 0.032438,
+        "pretransfer_time": 0.070896,
+        "size_upload": 205,
+        "size_download": 24,
+        "speed_download": 38,
+        "speed_upload": 332,
+        "download_content_length": 24,
+        "upload_content_length": 205,
+        "starttransfer_time": 0.615634,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 56586,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 70786,
+        "connect_time_us": 32438,
+        "namelookup_time_us": 19813,
+        "pretransfer_time_us": 70896,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 615634,
+        "total_time_us": 615720,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.6159248352050781,
+    "notificationExecutionTime sec": 0.6174118518829346
+}
+Sending "bet" request with amount = -19.3259, currency = EUR and ID = d5a6713dc87a4b14bc212258650a0a34
+{
+    "pass_provider_round": 1,
+    "round_id": "c100666f039846c593bd7738baa979f4",
+    "pass_provider_is_finished": 1,
+    "is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": -19.3259,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "d5a6713dc87a4b14bc212258650a0a34",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "c100666f039846c593bd7738baa979f4",
+        "finished": false
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580949",
+        "X-Nonce: 1d70beead85f47e6be64081e430a5f1c",
+        "X-Sign: c0703902c397690c3efec15beb36a768f7056eb4"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 543,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.002248,
+        "namelookup_time": 0.009487,
+        "connect_time": 0.021888,
+        "pretransfer_time": 0.056767,
+        "size_upload": 229,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 76,
+        "download_content_length": -1,
+        "upload_content_length": 229,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 56596,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 56673,
+        "connect_time_us": 21888,
+        "namelookup_time_us": 9487,
+        "pretransfer_time_us": 56767,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3002248,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.0025219917297363,
+    "notificationExecutionTime sec": 3.00410795211792
+}
+"bet" request failed
+Sending "win" request with amount = -6.4420, currency = EUR and ID = e986164105f741e2a0be2e7ed9a54ab9
+{
+    "pass_provider_round": 1,
+    "round_id": "c100666f039846c593bd7738baa979f4",
+    "pass_provider_is_finished": 1,
+    "is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": -6.442,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "e986164105f741e2a0be2e7ed9a54ab9",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "c100666f039846c593bd7738baa979f4",
+        "finished": false
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580952",
+        "X-Nonce: 16930bb11bfe4748b317d6f52d42e1a3",
+        "X-Sign: 22cee5a4c22fcfb3bb17c76dab3b218e8219f546"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 541,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.002007,
+        "namelookup_time": 0.009026,
+        "connect_time": 0.020708,
+        "pretransfer_time": 0.060205,
+        "size_upload": 227,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 75,
+        "download_content_length": -1,
+        "upload_content_length": 227,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 55072,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 60099,
+        "connect_time_us": 20708,
+        "namelookup_time_us": 9026,
+        "pretransfer_time_us": 60205,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3002007,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.002336025238037,
+    "notificationExecutionTime sec": 3.004439115524292
+}
+Sending "win" request with amount = -17.8944, currency = EUR and ID = 5248b9ff111744cba3641426518b4b58
+{
+    "pass_provider_round": 1,
+    "round_id": "c100666f039846c593bd7738baa979f4",
+    "pass_provider_is_finished": 1,
+    "is_finished": true
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": -17.8944,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "5248b9ff111744cba3641426518b4b58",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "c100666f039846c593bd7738baa979f4",
+        "finished": true
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580955",
+        "X-Nonce: 48b51a64121f481ea29891e2c51b1532",
+        "X-Sign: bd78773593d6e7924b7ea737fd5075ec4cc38663"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 543,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.002626,
+        "namelookup_time": 0.009123,
+        "connect_time": 0.02206,
+        "pretransfer_time": 0.060598,
+        "size_upload": 229,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 76,
+        "download_content_length": -1,
+        "upload_content_length": 229,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 55082,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 60495,
+        "connect_time_us": 22060,
+        "namelookup_time_us": 9123,
+        "pretransfer_time_us": 60598,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3002626,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.0028679370880127,
+    "notificationExecutionTime sec": 3.0044591426849365
+}
+Sending "bet" request with amount = -9.3051, currency = EUR and ID = bbef3f983fc64f15a9aa345f436958fa
+{
+    "pass_provider_round": 1,
+    "round_id": "621407932",
+    "pass_provider_is_finished": 1,
+    "is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": -9.3051,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "bbef3f983fc64f15a9aa345f436958fa",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "621407932",
+        "finished": false
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580958",
+        "X-Nonce: 39980df641a74f179e49d4e71596f808",
+        "X-Sign: 8903e8f5a94ea6b0c42af5f1cd116ee8c89f8ef3"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1808,
+        "request_size": 519,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.734302,
+        "namelookup_time": 0.01491,
+        "connect_time": 0.026372,
+        "pretransfer_time": 0.060908,
+        "size_upload": 205,
+        "size_download": 24,
+        "speed_download": 32,
+        "speed_upload": 279,
+        "download_content_length": 24,
+        "upload_content_length": 205,
+        "starttransfer_time": 0.734225,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 55096,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 60800,
+        "connect_time_us": 26372,
+        "namelookup_time_us": 14910,
+        "pretransfer_time_us": 60908,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 734225,
+        "total_time_us": 734302,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.7345340251922607,
+    "notificationExecutionTime sec": 0.7361581325531006
+}
+"bet" request failed
+Sending "bet" request with amount = -13.5997, currency = EUR and ID = ddba90a5c2454ad7a7e85b583f90fe19
+{
+    "pass_provider_round": 1,
+    "round_id": "621407932",
+    "pass_provider_is_finished": 1,
+    "is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "bet",
+        "amount": -13.5997,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "ddba90a5c2454ad7a7e85b583f90fe19",
+        "session_id": "123",
+        "type": "bet",
+        "round_id": "621407932",
+        "finished": false
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580959",
+        "X-Nonce: c84d63fbbd214831bd095e9e81c81dcb",
+        "X-Sign: ba40037ec65c13497403d926148cb3d4a01d6960"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 520,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.001389,
+        "namelookup_time": 0.01476,
+        "connect_time": 0.027359,
+        "pretransfer_time": 0.06466,
+        "size_upload": 206,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 68,
+        "download_content_length": -1,
+        "upload_content_length": 206,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 55112,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 64558,
+        "connect_time_us": 27359,
+        "namelookup_time_us": 14760,
+        "pretransfer_time_us": 64660,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3001389,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.001655101776123,
+    "notificationExecutionTime sec": 3.0032920837402344
+}
+"bet" request failed
+Sending "win" request with amount = -10.0208, currency = EUR and ID = 7e7c3d8b6dc44c699344421f09b58d79
+{
+    "pass_provider_round": 1,
+    "round_id": "621407932",
+    "pass_provider_is_finished": 1,
+    "is_finished": false
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": -10.0208,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "7e7c3d8b6dc44c699344421f09b58d79",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "621407932",
+        "finished": false
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580962",
+        "X-Nonce: 24b93af1fe734b138844e57285c51d26",
+        "X-Sign: a90ef1d8c3521e46105a6952909a5e7fa6498c6a"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": "application\/json",
+        "http_code": 400,
+        "header_size": 1808,
+        "request_size": 520,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 0.573716,
+        "namelookup_time": 0.016749,
+        "connect_time": 0.029367,
+        "pretransfer_time": 0.0689,
+        "size_upload": 206,
+        "size_download": 24,
+        "speed_download": 41,
+        "speed_upload": 359,
+        "download_content_length": 24,
+        "upload_content_length": 206,
+        "starttransfer_time": 0.573644,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 29592,
+        "http_version": 3,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 68806,
+        "connect_time_us": 29367,
+        "namelookup_time_us": 16749,
+        "pretransfer_time_us": 68900,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 573644,
+        "total_time_us": 573716,
+        "effective_method": "POST"
+    },
+    "raw response": "{\"detail\":\"Bad Request\"}",
+    "clientExecutionTime sec": 0.5739119052886963,
+    "notificationExecutionTime sec": 0.5754899978637695
+}
+Sending "win" request with amount = -3.5789, currency = EUR and ID = 8319e42e59414f02a2ec4face0e12359
+{
+    "pass_provider_round": 1,
+    "round_id": "621407932",
+    "pass_provider_is_finished": 1,
+    "is_finished": true
+}
+{
+    "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+    "query": {
+        "action": "win",
+        "amount": -3.5789,
+        "currency": "EUR",
+        "game_uuid": "7487f0fac9049c9ee0dd0635a8ce5f5bfe04cd15",
+        "player_id": "123",
+        "transaction_id": "8319e42e59414f02a2ec4face0e12359",
+        "session_id": "123",
+        "type": "win",
+        "round_id": "621407932",
+        "finished": true
+    },
+    "response": [],
+    "headers": [
+        "X-Merchant-Id: b06bced7abc649cc077f2a6aef29d67c",
+        "X-Timestamp: 1772580962",
+        "X-Nonce: de3cbda0b93e4183aa98a16ff348d1e2",
+        "X-Sign: dc561f251d7835dbd33537447e8440d2574e28d2"
+    ],
+    "curlInfo": {
+        "url": "https:\/\/v8d8c579-8000.euw.devtunnels.ms\/callback",
+        "content_type": null,
+        "http_code": 0,
+        "header_size": 0,
+        "request_size": 519,
+        "filetime": -1,
+        "ssl_verify_result": 0,
+        "redirect_count": 0,
+        "total_time": 3.002049,
+        "namelookup_time": 0.009206,
+        "connect_time": 0.021639,
+        "pretransfer_time": 0.061254,
+        "size_upload": 205,
+        "size_download": 0,
+        "speed_download": 0,
+        "speed_upload": 68,
+        "download_content_length": -1,
+        "upload_content_length": 205,
+        "starttransfer_time": 0,
+        "redirect_time": 0,
+        "redirect_url": "",
+        "primary_ip": "20.103.221.187",
+        "certinfo": [],
+        "primary_port": 443,
+        "local_ip": "10.200.1.148",
+        "local_port": 29606,
+        "http_version": 0,
+        "protocol": 2,
+        "ssl_verifyresult": 0,
+        "scheme": "https",
+        "appconnect_time_us": 61152,
+        "connect_time_us": 21639,
+        "namelookup_time_us": 9206,
+        "pretransfer_time_us": 61254,
+        "redirect_time_us": 0,
+        "starttransfer_time_us": 0,
+        "total_time_us": 3002049,
+        "effective_method": "POST"
+    },
+    "raw response": "",
+    "clientExecutionTime sec": 3.0023069381713867,
+    "notificationExecutionTime sec": 3.004063129425049
+}

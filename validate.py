@@ -19,7 +19,8 @@ async def main() -> None:
     # )
     # print(p_game.url)
     res = await client.self_validate()
-    print(res.log)
+    with open("slotegrator.log", "w") as f:
+        f.write("\n".join(res.log))
     await client.close()
 
 

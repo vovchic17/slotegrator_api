@@ -63,6 +63,7 @@ class HTTPSession:
         ) as resp:
             raw_resp = await resp.text()
             if resp.status != HTTPStatus.OK:
+                print(raw_resp)
                 json_resp = await resp.json(content_type=None)
                 raise SlotegratorAPIError(
                     method,
