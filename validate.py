@@ -8,6 +8,7 @@ async def main() -> None:
         merchant_id="b06bced7abc649cc077f2a6aef29d67c",
         merchant_key="a192884aaae353c865e40f22c208d0a41ab29723",
         base_api_url="https://staging.slotegrator.com/api/index.php/v1",
+        timeout=1000,
     )
     # games = await client.get_games()
     # p_game = await client.init_game(
@@ -18,9 +19,9 @@ async def main() -> None:
     #     "123",
     # )
     # print(p_game.url)
-    res = await client.self_validate()
+    valid = await client.self_validate()
     with open("slotegrator.log", "w") as f:
-        f.write("\n".join(res.log))
+        f.write("\n".join(valid.log))
     await client.close()
 
 
