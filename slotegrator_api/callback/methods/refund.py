@@ -13,11 +13,11 @@ class Refund(SlotegratorCallback):
     player_id: str
     transaction_id: str
     session_id: str
-    type: str | None
+    type: str | None = None
     bet_transaction_id: str
-    freespin_id: str
-    quantity: int
-    round_id: str | None
-    finished: bool | None
-    transaction_datetime: str | None
-    casino_request_retry_count: int | None
+    freespin_id: str | None = None
+    quantity: int | None = None
+    round_id: str | None = None
+    finished: bool | None = None
+    transaction_datetime: str | None = None
+    casino_request_retry_count: int | None = None

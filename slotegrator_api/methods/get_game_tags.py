@@ -14,3 +14,4 @@ class GetGameTags(SlotegratorMethod[Items[GameTag]]):
     __http_method__ = HTTPMethod.GET
 
     expand: CommaList[Literal["category"]] | None = None
+    page: int | None = None

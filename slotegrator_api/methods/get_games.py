@@ -17,3 +17,4 @@ class GetGames(SlotegratorMethod[Items[Game]]):
         CommaList[Literal["tags", "parameters", "images", "related_games"]]
         | None
     ) = None
+    page: int | None = None

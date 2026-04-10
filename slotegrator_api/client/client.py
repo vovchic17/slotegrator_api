@@ -1,6 +1,10 @@
+from collections.abc import AsyncIterator
 from datetime import datetime
 from typing import Literal
 
+from fastapi import APIRouter, FastAPI
+
+from slotegrator_api.callback import CallbackHandler
 from slotegrator_api.methods import (
     BalanceNotify,
     CancelFreevoucherCampaign,
@@ -60,24 +64,71 @@ class SlotegratorAPI:
             base_api_url=base_api_url,
             timeout=timeout,
         )
+        self.callback_handler: CallbackHandler | None = None
 
     async def close(self) -> None:
         await self._session.close()
+
+    def setup_callback(
+        self,
+        app: FastAPI | APIRouter,
+        path: str = "/",
+    ) -> None:
+        self.callback_handler = CallbackHandler(app, path, self.merchant_key)
 
     async def get_games(
         self,
         expand: list[Literal["tags", "parameters", "images", "related_games"]]
         | None = None,
+        page: int | None = None,
     ) -> list[Game]:
-        res = await self._session(GetGames(expand=expand))
+        res = await self._session(GetGames(expand=expand, page=page))
         return res.items
+
+    async def iter_games(
+        self,
+        expand: list[Literal["tags", "parameters", "images", "related_games"]]
+        | None = None,
+        start_page: int = 1,
+    ) -> AsyncIterator[Game]:
+        page = start_page
+
+        while True:
+            game_items = await self._session(
+                GetGames(expand=expand, page=page),
+            )
+            pg = game_items.meta
+            for game in game_items.items:
+                yield game
+            if pg.current_page == pg.page_count:
+                break
+            page += 1
 
     async def get_game_tags(
         self,
         expand: list[Literal["category"]] | None = None,
+        page: int | None = None,
     ) -> list[GameTag]:
-        res = await self._session(GetGameTags(expand=expand))
+        res = await self._session(GetGameTags(expand=expand, page=page))
         return res.items
+
+    async def iter_game_tags(
+        self,
+        expand: list[Literal["category"]] | None = None,
+        start_page: int = 1,
+    ) -> AsyncIterator[GameTag]:
+        page = start_page
+
+        while True:
+            tag_items = await self._session(
+                GetGameTags(expand=expand, page=page),
+            )
+            pg = tag_items.meta
+            for tag in tag_items.items:
+                yield tag
+            if pg.current_page == pg.page_count:
+                break
+            page += 1
 
     async def get_lobby_tables(
         self,

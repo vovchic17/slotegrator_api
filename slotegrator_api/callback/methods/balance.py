@@ -9,4 +9,4 @@ class Balance(SlotegratorCallback):
     action: Literal["balance"]
     player_id: str
     currency: str
-    session_id: str
+    session_id: str | None = None
