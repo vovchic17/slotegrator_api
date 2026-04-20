@@ -1,6 +1,6 @@
 from collections.abc import AsyncIterator
 from datetime import datetime
-from typing import Literal
+from typing import TYPE_CHECKING, Literal
 
 from fastapi import APIRouter, FastAPI
 
@@ -44,6 +44,15 @@ from slotegrator_api.types import (
 
 from .session import HTTPSession
 
+if TYPE_CHECKING:
+    from slotegrator_api.callback.callback_handler import (
+        BalanceHandler,
+        BetHandler,
+        RefundHandler,
+        RollbackHandler,
+        WinHandler,
+    )
+
 
 class SlotegratorAPI:
     """Slotegrator API client."""
@@ -75,6 +84,31 @@ class SlotegratorAPI:
         path: str = "/",
     ) -> None:
         self.callback_handler = CallbackHandler(app, path, self.merchant_key)
+
+    def balance[T: BalanceHandler](self, handler: T) -> T:
+        if self.callback_handler is not None:
+            self.callback_handler.register_handler("balance", handler)
+        return handler
+
+    def bet[T: BetHandler](self, handler: T) -> T:
+        if self.callback_handler is not None:
+            self.callback_handler.register_handler("bet", handler)
+        return handler
+
+    def win[T: WinHandler](self, handler: T) -> T:
+        if self.callback_handler is not None:
+            self.callback_handler.register_handler("win", handler)
+        return handler
+
+    def refund[T: RefundHandler](self, handler: T) -> T:
+        if self.callback_handler is not None:
+            self.callback_handler.register_handler("refund", handler)
+        return handler
+
+    def rollback[T: RollbackHandler](self, handler: T) -> T:
+        if self.callback_handler is not None:
+            self.callback_handler.register_handler("rollback", handler)
+        return handler
 
     async def get_games(
         self,
