@@ -23,5 +23,5 @@ class Rollback(SlotegratorCallback):
     rollback_transactions: list[RollbackTransaction]
     session_id: str
     type: str
-    provider_round_id: str
-    round_id: str
+    provider_round_id: str | None = None
+    round_id: str | None = None
