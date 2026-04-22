@@ -4,6 +4,8 @@ from .callback_handler import (
     CallbackHandler,
     Refund,
     Rollback,
+    RollbackResponse,
+    TransactionResponse,
     Win,
 )
 from .methods import RollbackTransaction, SlotegratorCallback
@@ -14,7 +16,9 @@ __all__ = (
     "CallbackHandler",
     "Refund",
     "Rollback",
+    "RollbackResponse",
     "RollbackTransaction",
     "SlotegratorCallback",
+    "TransactionResponse",
     "Win",
 )
