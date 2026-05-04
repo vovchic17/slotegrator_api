@@ -2,7 +2,7 @@ import hashlib
 import hmac
 import re
 from http import HTTPMethod
-from typing import TYPE_CHECKING, cast
+from typing import TYPE_CHECKING, TypedDict, cast
 from urllib.parse import urlencode
 
 from fastapi import APIRouter, FastAPI, Request
@@ -18,43 +18,43 @@ from slotegrator_api.callback.methods import (
 
 if TYPE_CHECKING:
     from collections.abc import Awaitable, Callable
-    from typing import Literal, TypedDict
+    from typing import Literal
 
-    class TransactionResponse(TypedDict):
-        """Transaction response model."""
 
-        balance: float
-        transaction_id: str
+class TransactionResponse(TypedDict):
+    """Transaction response model."""
 
-    class RollbackResponse(TransactionResponse):
-        """Rollback response model."""
+    balance: float
+    transaction_id: str
 
-        rollback_transactions: list[int]
 
-    type Method = Balance | Bet | Win | Refund | Rollback
-    type BalanceHandler = Callable[[Balance], Awaitable[float]]
-    type BetHandler = Callable[[Bet], Awaitable[TransactionResponse]]
-    type WinHandler = Callable[[Win], Awaitable[TransactionResponse]]
-    type RefundHandler = Callable[[Refund], Awaitable[TransactionResponse]]
-    type RollbackHandler = Callable[[Rollback], Awaitable[RollbackResponse]]
-    type HandlerUnion = (
-        BalanceHandler
-        | BetHandler
-        | WinHandler
-        | RefundHandler
-        | RollbackHandler
-    )
+class RollbackResponse(TransactionResponse):
+    """Rollback response model."""
 
-    type Action = Literal["balance", "bet", "win", "refund", "rollback"]
+    rollback_transactions: list[int]
 
-    class HandlersDict(TypedDict, total=False):
-        """Handler dictionary."""
 
-        balance: BalanceHandler
-        bet: BetHandler
-        win: WinHandler
-        refund: RefundHandler
-        rollback: RollbackHandler
+type Method = Balance | Bet | Win | Refund | Rollback
+type BalanceHandler = Callable[[Balance], Awaitable[float]]
+type BetHandler = Callable[[Bet], Awaitable[TransactionResponse]]
+type WinHandler = Callable[[Win], Awaitable[TransactionResponse]]
+type RefundHandler = Callable[[Refund], Awaitable[TransactionResponse]]
+type RollbackHandler = Callable[[Rollback], Awaitable[RollbackResponse]]
+type HandlerUnion = (
+    BalanceHandler | BetHandler | WinHandler | RefundHandler | RollbackHandler
+)
+
+type Action = Literal["balance", "bet", "win", "refund", "rollback"]
+
+
+class HandlersDict(TypedDict, total=False):
+    """Handler dictionary."""
+
+    balance: BalanceHandler
+    bet: BetHandler
+    win: WinHandler
+    refund: RefundHandler
+    rollback: RollbackHandler
 
 
 class CallbackHandler:
