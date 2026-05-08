@@ -29,7 +29,7 @@ class Game(SlotegratorObject):
 
     uuid: str
     name: str
-    image: str
+    image: str | None
     type: str
     provider: str
     provider_id: int
