@@ -114,22 +114,44 @@ class SlotegratorAPI:
         self,
         expand: list[Literal["tags", "parameters", "images", "related_games"]]
         | None = None,
+        filter_provider: str | None = None,
+        *,
+        filter_is_mobile: bool | None = None,
+        filter_has_freespins: bool | None = None,
         page: int | None = None,
     ) -> list[Game]:
-        res = await self._session(GetGames(expand=expand, page=page))
+        res = await self._session(
+            GetGames(
+                expand=expand,
+                filter_provider=filter_provider,
+                filter_is_mobile=filter_is_mobile,
+                filter_has_freespins=filter_has_freespins,
+                page=page,
+            ),
+        )
         return res.items
 
     async def iter_games(
         self,
         expand: list[Literal["tags", "parameters", "images", "related_games"]]
         | None = None,
+        filter_provider: str | None = None,
+        *,
+        filter_is_mobile: bool | None = None,
+        filter_has_freespins: bool | None = None,
         start_page: int = 1,
     ) -> AsyncIterator[Game]:
         page = start_page
 
         while True:
             game_items = await self._session(
-                GetGames(expand=expand, page=page),
+                GetGames(
+                    expand=expand,
+                    filter_provider=filter_provider,
+                    filter_is_mobile=filter_is_mobile,
+                    filter_has_freespins=filter_has_freespins,
+                    page=page,
+                ),
             )
             pg = game_items.meta
             for game in game_items.items:
