@@ -31,7 +31,7 @@ class TransactionResponse(TypedDict):
 class RollbackResponse(TransactionResponse):
     """Rollback response model."""
 
-    rollback_transactions: list[int]
+    rollback_transactions: list[str]
 
 
 type Method = Balance | Bet | Win | Refund | Rollback
