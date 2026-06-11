@@ -7,12 +7,12 @@ from .game_tag import GameTag
 class GameParameters(SlotegratorObject):
     """Game parameters object."""
 
-    rtp: int | None
+    rtp: float | None
     volatility: (
-        Literal["low", "low-medium", "medium", "medium-high", "high"] | None
+        Literal["low", "low-medium", "medium", "medium-high", "high", "very-high"] | None
     )
-    reels_count: int | None
-    lines_count: int | None
+    reels_count: str | None
+    lines_count: str | None
 
 
 class GameImage(SlotegratorObject):
