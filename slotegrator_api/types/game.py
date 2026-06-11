@@ -9,7 +9,15 @@ class GameParameters(SlotegratorObject):
 
     rtp: float | None
     volatility: (
-        Literal["low", "low-medium", "medium", "medium-high", "high", "very-high"] | None
+        Literal[
+            "low",
+            "low-medium",
+            "medium",
+            "medium-high",
+            "high",
+            "very-high",
+        ]
+        | None
     )
     reels_count: str | None
     lines_count: str | None
