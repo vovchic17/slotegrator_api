@@ -158,6 +158,8 @@ class SlotegratorAPI:
                 yield game
             if pg.current_page == pg.page_count:
                 break
+            if pg.total_count == 0:
+                break
             page += 1
 
     async def get_game_tags(
@@ -182,6 +184,8 @@ class SlotegratorAPI:
             pg = tag_items.meta
             for tag in tag_items.items:
                 yield tag
+            if pg.current_page == pg.page_count:
+                break
             if pg.current_page == pg.page_count:
                 break
             page += 1
