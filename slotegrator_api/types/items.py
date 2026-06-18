@@ -14,7 +14,7 @@ class PaginationLinks(SlotegratorObject):
 
     self: Href
     next: Href | None = None
-    last: Href
+    last: Href | None = None
 
 
 class PaginationMeta(SlotegratorObject):
