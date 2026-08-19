@@ -12,7 +12,6 @@ class SlotegratorAPIError(SlotegratorError):
     """Exception for API errors."""
 
     method: SlotegratorMethod
-    name: str
     message: str
     status: int
 

@@ -62,11 +62,16 @@ class HTTPSession:
             **kwargs,
         ) as resp:
             raw_resp = await resp.text()
+            if not raw_resp:
+                raise SlotegratorAPIError(
+                    method,
+                    "Empty response",
+                    resp.status,
+                )
             if resp.status != HTTPStatus.OK:
                 json_resp = await resp.json(content_type=None)
                 raise SlotegratorAPIError(
                     method,
-                    json_resp["name"],
                     json_resp["message"],
                     json_resp["status"],
                 )
